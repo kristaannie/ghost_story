@@ -1,24 +1,11 @@
 $(function() {
     console.log( "ready!" );
 
-  // $('.slides').slick({
-  //  fade: true,
-  //  speed: 4000,
-  //  dots: true,
-  //  arrows: false,
-  //  accessibility: true
-  // });
-
-
-  // $('.text-ease-in').keypress(function(){
-  //   console.log("it works!");
-  // });
-
-  $('.each-slide').hide();
+  $('.each-slide, .super-late, .left-arrow, .right-arrow').hide();
   $('.welcome-slide').show().click(function(){
     $('.welcome-slide').fadeOut(2000);
     $('.each-slide').delay(2000).fadeIn(2000);
-  });
+
 
   $('.slide-1').hide();
   $('.slide-1').delay(5500).fadeIn(4000).animate({
@@ -30,7 +17,7 @@ $(function() {
 
   $('.slide-2').hide();
   $('.slide-2').delay(15500).fadeIn(5000).animate({
-    opacity: 0.2,
+    opacity: 0.16,
   }, 46000, function() {
     // Animation complete.
   });
@@ -41,6 +28,14 @@ $(function() {
   }, 57000, function() {
     // Animation complete.
   });
+
+  $(".right-arrow, .left-arrow").hide();
+  $(".right-arrow, .left-arrow").delay(47100).fadeIn(3000).animate({
+    opacity: 0,
+  }, 116000, function() {
+    // Animation complete.
+  });
+
 
   $('.slide-4').hide();
   $('.slide-4').delay(57000).fadeIn(3500).animate({
@@ -74,8 +69,10 @@ $(function() {
   $('.slide-8').delay(137000).fadeIn(2000);
 
   $('.super-late').hide();
-  $('.super-late').delay(137000).fadeIn(2500);
+  $('.super-late').delay(137000).fadeIn(2000);
 
+  $('.the-end').hide();
+  $('.the-end').delay(137100).show(200);
 
-
+});
 });

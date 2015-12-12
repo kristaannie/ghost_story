@@ -4,8 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3em;
-  margin-top: 10em;
+  // padding: 3em;
+  // margin-top: 10em;
 
 }
 
@@ -15,49 +15,72 @@
   width: 100%;
   background: url(https://s3-us-west-2.amazonaws.com/krista-anne/ghost_pool.jpg) no-repeat center center fixed;
   background-size: cover;
-  opacity: .2;
+  opacity: .3;
   margin: 0 auto;
 
 }
 
 .ghosts {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-size: 10em;
-  color: #9bc3cc;
+  color: white;
   height: 100vh;
   margin: 0 auto;
 
+
   p {
-  text-shadow: -10px -10px 4px rgba(245,233,186,.5);
+    position: fixed;
+    bottom: 0;
+    left: .2em;
+    font-family: 'VT323', ;
+    color: yellow;
+    text-shadow: -10px -10px 20px black;
+    opacity: 1;
 }
 }
 
 .each-slide {
   display: flex;
   max-width: 50%;
-  color: gray;
+  color: #555555;
   font-family: 'Karma', serif;
   font-size: 1.1em;
   margin: 1em;
 }
 
-// .slide-3 {
-//   box-shadow: 10px 10px 64px 0px rgba(245,233,186,1);
-// }
-
-p {
-  letter-spacing: .2px;
-  line-height: 170%;
+.slide-1 {
+  margin-top: 10em;
 }
 
-// .dot {
-//   font-size: 6em;
-//   color: blue;
-//   position: fixed;
-//   right: 3;
-//   top: 0;
-// }
+.slide-3 {
 
+p{
+  text-shadow: 2px 15px 8px rgba(255, 255, 177, .7);
+   }
+}
+
+.left-arrow {
+  position: fixed;
+  bottom: 1em;
+  left: 3em;
+  color: rgb(148, 177, 183);
+}
+
+.right-arrow {
+  position: fixed;
+  bottom: 1em;
+  right: 3em;
+  color: rgb(148, 177, 183);
+}
+
+.super-late {
+  display: block;
+  color: rgb(124, 158, 165);
+  font-size: 1.2em;
+  font-family: 'Sacramento', cursive;
+  padding: 1em;
+  margin-bottom: 2em;
+}
 
 
 //using SLICK: //
