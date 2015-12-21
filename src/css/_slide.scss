@@ -12,10 +12,11 @@
 
 .welcome-slide {
   height: 100vh;
+  max-height: 100vh;
   width: 100%;
   background: url(https://s3-us-west-2.amazonaws.com/krista-anne/ghost_pool.jpg) no-repeat center center fixed;
   background-size: cover;
-  opacity: .3;
+  opacity: .8;
   margin: 0 auto;
 
 }
@@ -27,16 +28,54 @@
   height: 100vh;
   margin: 0 auto;
 
-
-  p {
-    position: fixed;
-    bottom: 0;
-    left: .2em;
-    font-family: 'VT323', ;
-    color: yellow;
-    text-shadow: -10px -10px 20px black;
-    opacity: 1;
 }
+
+.ghost-text {
+  position: fixed;
+  bottom: -4em;
+  left: 0;
+  animation:bounce 11s infinite;
+
+
+
+  h1 {
+    font-family: 'VT323', ;
+    color: rgb(234, 242, 152);
+    color: white;
+    text-shadow: -10px -10px 20px black;
+    opacity: .7;
+    // line-height: 100%;
+    font-size: 1em;
+    margin: .3em;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+  font-size: .09em;
+  // background-color: black;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  opacity: .7;
+  text-transform: uppercase;
+  margin-left: 1em;
+
+
+}
+
+
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:-60px; }
+  // 25% { bottom:32px; }
+  50%      { bottom:60px; }
+  100%     {bottom:-60px;}
+
+}
+
+.slide {
+  margin: 1.5em;
 }
 
 .each-slide {
@@ -45,7 +84,7 @@
   color: #555555;
   font-family: 'Karma', serif;
   font-size: 1.1em;
-  margin: 1em;
+  // margin: 1em;
 }
 
 .slide-1 {
@@ -62,21 +101,21 @@ p{
 .left-arrow {
   position: fixed;
   bottom: 1em;
-  left: 3em;
-  color: rgb(148, 177, 183);
+  left: 13em;
+  color: rgba(148, 177, 183, .8);
 }
 
 .right-arrow {
   position: fixed;
   bottom: 1em;
-  right: 3em;
-  color: rgb(148, 177, 183);
+  right: 13em;
+  color: rgba(148, 177, 183, .8);
 }
 
 .super-late {
   display: block;
   color: rgb(124, 158, 165);
-  font-size: 1.2em;
+  font-size: 2.5em;
   font-family: 'Sacramento', cursive;
   padding: 1em;
   margin-bottom: 2em;

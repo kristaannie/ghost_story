@@ -1,78 +1,104 @@
 $(function() {
     console.log( "ready!" );
 
-  $('.each-slide, .super-late, .left-arrow, .right-arrow').hide();
+  $('.slide, .super-late, .left-arrow, .right-arrow').hide();
   $('.welcome-slide').show().click(function(){
     $('.welcome-slide').fadeOut(2000);
-    $('.each-slide').delay(2000).fadeIn(2000);
+    // $('.each-slide').delay(2000).fadeIn(2000);
 
-
+function slide1Action() {
   $('.slide-1').hide();
-  $('.slide-1').delay(5500).fadeIn(4000).animate({
+  $('.slide-1').delay(2100).fadeIn(6500, "linear").animate({
     opacity: 0.2,
-  }, 15000, function() {
-    // Animation complete.
-  });
+  }, 15000);
+  setTimeout(slide2Action, 4200);
+};
 
+slide1Action();
 
+function slide2Action() {
   $('.slide-2').hide();
-  $('.slide-2').delay(15500).fadeIn(5000).animate({
+  $('.text-ease-in').hide();
+  $('.slide-2').delay(2000).fadeIn(5000).animate({
     opacity: 0.16,
-  }, 46000, function() {
-    // Animation complete.
-  });
+  }, 46000);
+  $('.text-ease-in').fadeIn(17000);
+  setTimeout(slide3Action, 17000);
+}
 
+function slide3Action() {
   $('.slide-3').hide();
-  $('.slide-3').delay(47000).fadeIn(3000).animate({
+  $('.slide-3').delay(2000).fadeIn(6000).animate({
     opacity: 0.2,
-  }, 57000, function() {
-    // Animation complete.
-  });
+  }, 57000);
+  setTimeout(slide4Action, 4000);
+};
 
-  $(".right-arrow, .left-arrow").hide();
-  $(".right-arrow, .left-arrow").delay(47100).fadeIn(3000).animate({
-    opacity: 0,
-  }, 116000, function() {
-    // Animation complete.
-  });
+  // $(".right-arrow, .left-arrow").hide();
+  // $(".right-arrow, .left-arrow").delay(25000).fadeIn(3000).animate({
+  //   opacity: 0,
+  // }, 71000);
 
-
+function slide4Action() {
   $('.slide-4').hide();
-  $('.slide-4').delay(57000).fadeIn(3500).animate({
+  $('.slide-4').delay(2000).fadeIn(3500).animate({
     opacity: 0.2,
-  }, 77000, function() {
-    // Animation complete.
-  });
+  }, 77000);
+  $('.right-arrow, .left-arrow').fadeIn(500);
+  setTimeout(slide5Action, 9000);
+};
 
+function slide5Action() {
   $('.slide-5').hide();
-  $('.slide-5').delay(77000).fadeIn(2000).animate({
+  $('.text-ease-in-2').hide();
+  $('.slide-5').delay(2000).fadeIn(2000).animate({
     opacity: 0.2,
-  }, 97000, function() {
-    // Animation complete.
-  });
+  }, 97000);
+  $('.text-ease-in').fadeIn(17000);
+  $('.right-arrow, .left-arrow').fadeIn(500);
+  setTimeout(slide6Action, 9000);
+};
 
+function slide6Action() {
   $('.slide-6').hide();
-  $('.slide-6').delay(97000).fadeIn(2000).animate({
+  $('.slide-6').delay(2000).fadeIn(2000).animate({
     opacity: 0.2,
-  }, 117000, function() {
-    // Animation complete.
-  });
+  }, 117000);
+  $('.right-arrow, .left-arrow').fadeIn(500);
+  setTimeout(slide7Action, 9000);
+};
 
+function slide7Action() {
   $('.slide-7').hide();
-  $('.slide-7').delay(117000).fadeIn(2000).animate({
+  $('.slide-7').delay(2000).fadeIn(2000).animate({
     opacity: 0.2,
-  }, 137000, function() {
-    // Animation complete.
-  });
+  }, 137000);
+  $('.right-arrow, .left-arrow').fadeIn(500);
+  setTimeout(slide8Action, 9000);
+};
 
+function slide8Action() {
   $('.slide-8').hide();
-  $('.slide-8').delay(137000).fadeIn(2000);
+  $('.slide-8').delay(2000).fadeIn(2000);
+  // $('.right-arrow, .left-arrow').fadeIn(500);
+  setTimeout(slideEndAction);
+};
 
+function slideEndAction() {
   $('.super-late').hide();
-  $('.super-late').delay(137000).fadeIn(2000);
-
-  $('.the-end').hide();
-  $('.the-end').delay(137100).show(200);
+  $('.super-late').delay(1000).fadeIn(8000);
+};
 
 });
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        $('.right-arrow, .left-arrow').hide("slow");
+        console.log("biatch!");
+    }
+};
+
+
+
+
 });
