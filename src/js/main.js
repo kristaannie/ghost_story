@@ -50,20 +50,22 @@ function slide4Action() {
 
 function slide5Action() {
   $('.slide-5').hide();
-  $('.text-ease-in-2').hide();
+  // $('.text-ease-in-2').hide();
   $('.slide-5').delay(2000).fadeIn(2000).animate({
     opacity: 0.2,
   }, 97000);
-  $('.text-ease-in').fadeIn(17000);
+  // $('.text-ease-in-2').fadeIn(17000);
   $('.right-arrow, .left-arrow').fadeIn(500);
   setTimeout(slide6Action, 9000);
 };
 
 function slide6Action() {
   $('.slide-6').hide();
+  $('.text-ease-in-2').hide();
   $('.slide-6').delay(2000).fadeIn(2000).animate({
     opacity: 0.2,
   }, 117000);
+  $('.text-ease-in-2').fadeIn(17000);
   $('.right-arrow, .left-arrow').fadeIn(500);
   setTimeout(slide7Action, 9000);
 };
